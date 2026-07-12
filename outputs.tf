@@ -1,3 +1,7 @@
+output "machine_learning_workspace_network_outbound_rule_service_tags_id" {
+  description = "Map of id values across all machine_learning_workspace_network_outbound_rule_service_tags, keyed the same as var.machine_learning_workspace_network_outbound_rule_service_tags"
+  value       = { for k, v in azurerm_machine_learning_workspace_network_outbound_rule_service_tag.machine_learning_workspace_network_outbound_rule_service_tags : k => v.id }
+}
 output "machine_learning_workspace_network_outbound_rule_service_tags_name" {
   description = "Map of name values across all machine_learning_workspace_network_outbound_rule_service_tags, keyed the same as var.machine_learning_workspace_network_outbound_rule_service_tags"
   value       = { for k, v in azurerm_machine_learning_workspace_network_outbound_rule_service_tag.machine_learning_workspace_network_outbound_rule_service_tags : k => v.name }
